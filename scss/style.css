@@ -70,4 +70,39 @@
   color: rgb(252, 102, 2);
   font-weight: bold;
   cursor: pointer;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: rgb(252, 248, 248);
+  max-width: auto;
+}
+
+.about-container {
+  flex: 1;
+  margin-right: 300px;
+}
+.about-container h2 {
+  font-size: 2rem;
+  color: rgb(252, 102, 2);
+}
+.about-container p {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  margin-left: 300px;
+}
+.about-image img {
+  width: 500px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
 }/*# sourceMappingURL=style.css.map */
