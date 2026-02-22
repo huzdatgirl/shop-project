@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +20,7 @@
   display: flex;
   gap: 2rem;
   font-size: 0.9rem;
-  margin-right: 20px;
+  margin-right: 60px;
   cursor: pointer;
 }
 
@@ -28,6 +29,7 @@
   width: 100%;
   height: 70px;
   position: fixed;
+  z-index: 1000;
   top: 30px;
 }
 
@@ -44,7 +46,7 @@
   text-decoration: none;
 }
 .nav-block-logo:hover {
-  opacity: 0.7;
+  filter: brightness(0.95);
 }
 
 .nav-block-eshop {
@@ -59,7 +61,7 @@
   text-decoration: none;
 }
 .nav-block-eshop:hover {
-  opacity: 0.9;
+  filter: brightness(1.1);
 }
 
 .nav-block {
@@ -74,7 +76,7 @@
   text-decoration: none;
 }
 .nav-block:hover {
-  opacity: 0.7;
+  filter: brightness(0.95);
 }
 
 .cart-icon {
@@ -95,11 +97,17 @@
   cursor: pointer;
 }
 
+#cart-total {
+  margin-left: 10px;
+}
+
 .about-section {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  margin-top: 100px;
   background-color: rgb(252, 248, 248);
   max-width: auto;
 }
@@ -183,4 +191,79 @@
   font-weight: bold;
   font-size: 1.3rem;
   color: black;
+}
+
+.logo {
+  height: 200px;
+  background-color: rgb(252, 248, 248);
+}
+
+.logo img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.promo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(/shop-project/photo/tło.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+.promo-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.promo-section h2 {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+.promo-section p {
+  position: relative;
+  z-index: 1;
+  color: white;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  max-width: 600px;
+}
+
+.promo-button-container {
+  text-align: center;
+  margin: 40px;
+}
+
+.promo-button {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: rgb(252, 102, 2);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.promo-button:hover {
+  background-color: rgb(252, 80, 0);
+  transform: translateY(-2px);
 }/*# sourceMappingURL=style.css.map */
