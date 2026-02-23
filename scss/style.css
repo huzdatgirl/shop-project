@@ -266,4 +266,53 @@
 .promo-button:hover {
   background-color: rgb(252, 80, 0);
   transform: translateY(-2px);
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  background-color: rgb(31, 40, 54);
+}
+
+.footer-container-left {
+  padding: 2rem;
+  margin-left: 300px;
+}
+.footer-container-left h2 {
+  color: rgb(252, 102, 2);
+  font-family: "Gveret Levin", cursive;
+  font-size: 1.6rem;
+}
+.footer-container-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+.footer-container-right {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-right: 300px;
+  color: white;
+}
+.footer-container-right h2 {
+  font-size: 1.6rem;
+}
+.footer-container-right a {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  background-color: rgb(252, 248, 248);
+}
+.footer-bottom p {
+  margin-left: 300px;
+  padding: 40px 0;
 }/*# sourceMappingURL=style.css.map */
