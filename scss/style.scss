@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body {
+    padding-top: 100px;
+}
 //Górny pasek menu
 .top-bar {
     display: flex;
@@ -13,6 +16,12 @@
     top: 0;
     width: 100%;
     z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .top-bar-container {
@@ -103,42 +112,45 @@
     margin-left: 10px;
 }
 
-//Pierwsza sekcja o nas
+// Pierwsza sekcja o nas
 .about-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    margin-top: 100px;
-    background-color: rgb(252, 248, 248);
-    max-width: auto;
-}
+  background-color: rgb(252, 248, 248);
+  padding: 2rem 0;
 
-.about-container {
-    flex: 1;
-    margin-right: 300px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .about-image {
+    flex: 1 1 45%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .about-container {
+    flex: 1 1 50%;
     h2 {
-        font-size: 2rem;
-        color: rgb(252, 102, 2);
+      font-size: 2rem;
+      color: rgb(252, 102, 2);
     }
     p {
-        margin-top: 20px;
-        font-size: 1.1rem;
-        line-height: 1.6;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
+  }
 }
 
-.about-image {
-    flex: 1;
-    margin-left: 300px;
-    img {
-        width: 500px;
-        height: 500px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-}
 
 // Druga sekcja dlaczego my
 .why-us {
@@ -153,8 +165,6 @@
         margin-top: 20px;
         font-size: 1.1rem;
         line-height: 1.6;
-        margin-left: 300px;
-        margin-right: 300px;
     }
 }
 
@@ -174,7 +184,7 @@
     width: 300px;
     height: 270px;
     text-align: center;
-    box-shadow: 04px 4px 8px rgba(0, 0, 0, 0.8);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 .features-box:hover {
@@ -284,8 +294,8 @@
 }
 
 .footer-container-left {
-    padding: 2rem;
-    margin-left: 300px;
+    max-width: 1200px;
+    margin: 0 auto;
     h2 {
         color: rgb(252, 102, 2);
         font-family: "Gveret Levin", cursive;
@@ -301,8 +311,8 @@
 .footer-container-right {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    margin-right: 300px;
+    max-width: 1200px;
+    margin: 0 auto;
     color: white;
     h2 {
         font-size: 1.6rem;
@@ -318,7 +328,52 @@
 .footer-bottom {    
     background-color: rgb(252, 248, 248);
     p {
-        margin-left: 300px;
         padding: 40px 0;
     }
+}
+
+// Responsywność
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about-section .container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .about-image, .about-container {
+            flex: 1 1 100%;
+            margin: 0;
+            text-align: center;
+    }
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .features-box {
+        width: 80%;
+        height: auto;
+    }
+    .promo-section p {
+        max-width: 90%;
+    }
+     .promo-button-container {
+        margin: 20px;
+     }
+     .footer-main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-container-left, .footer-container-right {
+        max-width: 90%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .footer-bottom p {
+        text-align: center;
+        padding: 20px;
+    }
+    
 }
