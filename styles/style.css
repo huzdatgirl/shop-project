@@ -124,7 +124,6 @@ body {
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  width: 100%;
   box-sizing: border-box;
   gap: 3rem;
   flex-wrap: wrap;
@@ -203,7 +202,6 @@ body {
 }
 
 .logo {
-  height: 200px;
   background-color: rgb(252, 248, 248);
 }
 
