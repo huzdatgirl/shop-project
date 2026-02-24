@@ -1,4 +1,10 @@
 @charset "UTF-8";
+.nav-block-logo, .nav-block-eshop, .nav-block, #cart, .features, .promo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -48,9 +54,6 @@ body {
 }
 
 .nav-block-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex: 2;
   background-color: white;
   color: rgb(252, 102, 2);
@@ -64,9 +67,6 @@ body {
 }
 
 .nav-block-eshop {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex: 1;
   background-color: rgb(252, 102, 2);
   color: white;
@@ -79,9 +79,6 @@ body {
 }
 
 .nav-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex: 1;
   background-color: white;
   color: rgb(252, 102, 2);
@@ -101,9 +98,6 @@ body {
 }
 
 #cart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 0.1rem;
   background-color: white;
   color: rgb(252, 102, 2);
@@ -164,8 +158,6 @@ body {
 }
 
 .features {
-  display: flex;
-  justify-content: center;
   padding: 2rem 0;
   gap: 30px;
   background-color: white;
@@ -213,9 +205,7 @@ body {
 }
 
 .promo-section {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   background: url(/shop-project/photo/tło.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
