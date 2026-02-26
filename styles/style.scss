@@ -27,6 +27,8 @@ body {
 .container {
     max-width: $container-max-width;
     margin: 0 auto;
+    padding: 0 $space-base;
+    box-sizing: border-box;
 }
 
 .top-bar-container {
@@ -47,8 +49,15 @@ body {
     top: 30px;
 }
 
-.nav-block-logo {
+.nav-block-logo,
+.nav-block-eshop,
+.nav-block, 
+#cart {
     @extend %flex-center;
+}
+
+
+.nav-block-logo {
     flex: 2;
     background-color: $color-primary;
     color: $color-accent;
@@ -63,7 +72,6 @@ body {
 }
 
 .nav-block-eshop {
-    @extend %flex-center;
     flex: 1;
     background-color: $color-accent;
     color: $color-primary;
@@ -77,7 +85,6 @@ body {
 }
 
 .nav-block {
-    @extend %flex-center;
     flex: 1;
     background-color: $color-primary;
     color: $color-accent;
@@ -97,7 +104,6 @@ body {
 }
 
 #cart {
-    @extend %flex-center;
     gap: 0.1rem;
     background-color: $color-primary;
     color: $color-accent;
@@ -115,13 +121,7 @@ body {
   padding: $space-xl 0;
 
   .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: $container-max-width;
-    box-sizing: border-box;
-    gap: 3rem;
-    flex-wrap: wrap;
+    @extend %section-flex;
   }
 
   .about-image {
@@ -323,47 +323,34 @@ body {
     }
 }
 
+
 // Responsywność
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-sm) {
     .navbar {
         flex-direction: column;
-        height: auto;
+        align-items: stretch;
     }
 
-    .about-section .container {
-        flex-direction: column;
-        padding: 0 20px;
+    .container {
+        padding: 0 $space-lg;
     }
-    .about-image, .about-container {
-            flex: 1 1 100%;
-            margin: 0;
-            text-align: center;
-    }
-    .features {
-        flex-direction: column;
-        align-items: center;
-    }
-    .features-box {
-        width: 80%;
-        height: auto;
-    }
-    .promo-section p {
-        max-width: 90%;
-    }
-     .promo-button-container {
-        margin: 20px;
-     }
-     .footer-main {
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer-container-left, .footer-container-right {
-        max-width: 90%;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .footer-bottom p {
-        text-align: center;
-        padding: 20px;
-    }  
 }
+
+@media (max-width: $breakpoint-xl) {
+    .container {
+        padding: 0 $space-lg;
+    }
+
+    .features-box {
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: $breakpoint-xs) {
+    .features-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+

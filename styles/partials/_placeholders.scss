@@ -3,3 +3,11 @@
     align-items: center;
     justify-content: center;
 }
+
+%section-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}

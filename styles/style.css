@@ -1,8 +1,19 @@
 @charset "UTF-8";
-.nav-block-logo, .nav-block-eshop, .nav-block, #cart, .features, .promo-section {
+.nav-block-logo,
+.nav-block-eshop,
+.nav-block,
+#cart, .features, .promo-section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.about-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 * {
@@ -34,6 +45,8 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .top-bar-container {
@@ -112,15 +125,6 @@ body {
 .about-section {
   background-color: rgb(252, 248, 248);
   padding: 2rem 0;
-}
-.about-section .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  box-sizing: border-box;
-  gap: 3rem;
-  flex-wrap: wrap;
 }
 .about-section .about-image {
   flex: 1 1 45%;
@@ -312,45 +316,27 @@ body {
   padding: 3rem 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 730px) {
   .navbar {
     flex-direction: column;
-    height: auto;
+    align-items: stretch;
   }
-  .about-section .container {
-    flex-direction: column;
-    padding: 0 20px;
+  .container {
+    padding: 0 1.5rem;
   }
-  .about-image, .about-container {
-    flex: 1 1 100%;
-    margin: 0;
-    text-align: center;
-  }
-  .features {
-    flex-direction: column;
-    align-items: center;
+}
+@media (max-width: 1300px) {
+  .container {
+    padding: 0 1.5rem;
   }
   .features-box {
-    width: 80%;
-    height: auto;
+    flex: 1 1 calc(50% - 30px);
+    max-width: calc(50% - 30px);
   }
-  .promo-section p {
-    max-width: 90%;
-  }
-  .promo-button-container {
-    margin: 20px;
-  }
-  .footer-main {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-container-left, .footer-container-right {
-    max-width: 90%;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .footer-bottom p {
-    text-align: center;
-    padding: 20px;
+}
+@media (max-width: 480px) {
+  .features-box {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
