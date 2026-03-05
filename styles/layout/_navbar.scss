@@ -1,0 +1,94 @@
+//NAVBAR
+
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: $space-xs $space-base;
+    background-color: $color-layout-dark;
+    color: $color-primary;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.top-bar-container {
+    display: flex;
+    gap: 2rem;
+    font-size: $text-sm;
+    margin-right: 60px;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    height:70px;
+    position: fixed;
+    z-index: 1000;
+    top: 30px;
+}
+
+.nav-block-logo,
+.nav-block-eshop,
+.nav-block, 
+#cart {
+    @extend %flex-center;
+}
+.nav-block-logo {
+    flex: 2;
+    background-color: $color-primary;
+    color: $color-accent;
+    font-family: "Gveret Levin", cursive;
+    font-size: $text-xl;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        filter: brightness(0.95);
+    }
+}
+
+.nav-block-eshop {
+    flex: 1;
+    background-color: $color-accent;
+    color: $color-primary;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+}
+
+.nav-block {
+    flex: 1;
+    background-color: $color-primary;
+    color: $color-accent;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        filter: brightness(0.95);
+    }
+}
+
+.cart-icon {
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+}
+
+#cart {
+    gap: 0.1rem;
+    background-color: $color-primary;
+    color: $color-accent;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#cart-total {
+    margin-left: 10px;
+}

@@ -1,0 +1,46 @@
+//FOOTER
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: $space-xxl 0;
+    background-color: $color-layout-dark;
+}
+
+.footer-container-left {
+    h2 {
+        color: $color-accent;
+        font-family: "Gveret Levin", cursive;
+        font-size: $text-xl;
+    }
+    p {
+        font-size: $text-base;
+        line-height: $line-height-base;
+        color: $color-primary;
+    }
+}
+
+.footer-container-right {
+    display: flex;
+    flex-direction: column;
+    color: $color-primary;
+    h2 {
+        font-size: $text-xl;
+    }
+    a {
+        font-size: $text-base;
+        line-height: $line-height-base;
+        color: $color-primary;
+        text-decoration: none;
+    }
+}
+
+.footer-bottom {    
+    background-color: $color-layout-light;
+    p {
+        font-size: $text-sm;
+        padding: $space-xxl 0;
+    }
+}
