@@ -2,7 +2,7 @@
 .nav-block-logo,
 .nav-block-eshop,
 .nav-block,
-#cart, .features, .promo-section {
+#cart, .promo-section, .features {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,112 +14,6 @@
   align-items: center;
   gap: 3rem;
   flex-wrap: wrap;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  padding-top: 100px;
-}
-
-.top-bar {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.5rem 1rem;
-  background-color: rgb(31, 40, 54);
-  color: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
-}
-
-.top-bar-container {
-  display: flex;
-  gap: 2rem;
-  font-size: 0.875rem;
-  margin-right: 60px;
-  cursor: pointer;
-}
-
-.navbar {
-  display: flex;
-  width: 100%;
-  height: 70px;
-  position: fixed;
-  z-index: 1000;
-  top: 30px;
-}
-
-.nav-block-logo {
-  flex: 2;
-  background-color: white;
-  color: rgb(252, 102, 2);
-  font-family: "Gveret Levin", cursive;
-  font-size: 1.75rem;
-  cursor: pointer;
-  text-decoration: none;
-}
-.nav-block-logo:hover {
-  filter: brightness(0.95);
-}
-
-.nav-block-eshop {
-  flex: 1;
-  background-color: rgb(252, 102, 2);
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-}
-.nav-block-eshop:hover {
-  filter: brightness(1.1);
-}
-
-.nav-block {
-  flex: 1;
-  background-color: white;
-  color: rgb(252, 102, 2);
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-}
-.nav-block:hover {
-  filter: brightness(0.95);
-}
-
-.cart-icon {
-  width: 100px;
-  height: 50px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-#cart {
-  gap: 0.1rem;
-  background-color: white;
-  color: rgb(252, 102, 2);
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#cart-total {
-  margin-left: 10px;
 }
 
 .about-section {
@@ -265,6 +159,144 @@ body {
 .promo-button:hover {
   background-color: rgb(252, 80, 0);
   transform: translateY(-2px);
+}
+
+.search-section {
+  background-color: rgb(252, 248, 248);
+  padding: 2rem 0;
+}
+
+.search {
+  position: relative;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.search input {
+  width: 100%;
+  padding: 16px 40px;
+  font-size: 0.875rem;
+  border: 2px solid white;
+  border-radius: 8px;
+  outline: none;
+}
+
+.search input:focus {
+  border-color: rgb(252, 102, 2);
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding-top: 100px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  background-color: rgb(31, 40, 54);
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.top-bar-container {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.875rem;
+  margin-right: 60px;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  z-index: 1000;
+  top: 30px;
+}
+
+.nav-block-logo {
+  flex: 2;
+  background-color: white;
+  color: rgb(252, 102, 2);
+  font-family: "Gveret Levin", cursive;
+  font-size: 1.75rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.nav-block-logo:hover {
+  filter: brightness(0.95);
+}
+
+.nav-block-eshop {
+  flex: 1;
+  background-color: rgb(252, 102, 2);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.nav-block-eshop:hover {
+  filter: brightness(1.1);
+}
+
+.nav-block {
+  flex: 1;
+  background-color: white;
+  color: rgb(252, 102, 2);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.nav-block:hover {
+  filter: brightness(0.95);
+}
+
+.cart-icon {
+  width: 100px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#cart {
+  gap: 0.1rem;
+  background-color: white;
+  color: rgb(252, 102, 2);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#cart-total {
+  margin-left: 10px;
 }
 
 .footer-main {

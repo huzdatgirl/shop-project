@@ -1,0 +1,30 @@
+.search-section {
+    background-color: $color-layout-light;
+    padding: $space-xl 0;
+}
+
+.search {
+    position: relative;
+    width: 100%;
+    margin: 40px 0;
+}
+
+.search input {
+    width: 100%;
+    padding: 16px 40px;
+    font-size: $text-sm;
+    border: 2px solid $color-primary;
+    border-radius: 8px;
+    outline: none;
+}
+.search input:focus {
+    border-color: $color-accent;
+}
+
+.search-icon {
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        transform: translateY(-50%);
+        font-size: 15px;
+}
