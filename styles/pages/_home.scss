@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +17,6 @@ body {
     box-sizing: border-box;
 }
 
->>>>>>> 780312dcf4bd482f101307ecd7861f3237141f30
 // Pierwsza sekcja o nas
 .about-section {
   background-color: $color-layout-light;
@@ -176,36 +173,4 @@ body {
         background-color: rgb(252, 80, 0);  
         transform: translateY(-2px);       
     }
-<<<<<<< HEAD
-=======
-}
-// Responsywność
-@media (max-width: $breakpoint-sm) {
-    .navbar {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .container {
-        padding: 0 $space-lg;
-    }
-}
-
-@media (max-width: $breakpoint-xl) {
-    .container {
-        padding: 0 $space-lg;
-    }
-
-    .features-box {
-        flex: 1 1 calc(50% - 30px);
-        max-width: calc(50% - 30px);
-    }
-}
-
-@media (max-width: $breakpoint-xs) {
-    .features-box {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
->>>>>>> 780312dcf4bd482f101307ecd7861f3237141f30
 }
