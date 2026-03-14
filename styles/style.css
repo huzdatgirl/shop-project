@@ -220,6 +220,12 @@ body {
   margin-top: 1.5rem;
 }
 
+.categories {
+  width: 250px;
+  position: sticky;
+  top: 180px;
+  align-self: flex-start;
+}
 .categories h3 {
   font-size: 1.75rem;
   color: rgb(252, 102, 2);
@@ -241,6 +247,28 @@ body {
 
 .categories li:last-child {
   border-bottom: none;
+}
+
+.products {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-left: 3rem;
+}
+.products img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.products h4 {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+.products p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: rgb(252, 102, 2);
 }
 
 * {
