@@ -28,3 +28,37 @@
         transform: translateY(-50%);
         font-size: 15px;
 }
+
+
+.shop-layout {
+    display: flex;
+    gap: $space-lg;
+    margin-top: $space-lg;
+}
+
+.categories {
+    h3 {
+        font-size: $text-xl;
+        color: $color-accent;
+    }
+
+    ul {
+        list-style: none;
+        margin-top: $space-lg;
+        font-size: $text-base;
+        line-height: $line-height-base;
+    }
+
+    li {
+        border-bottom: 1px solid rgb(214, 210, 210);
+        padding: 10px 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+.categories li:last-child {
+    border-bottom: none;
+}
