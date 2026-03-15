@@ -93,3 +93,24 @@
     }
 }
 
+// Paginacja
+.pagination {
+    grid-column: 1 / -1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 20px 10px;
+    border: none;
+    background: $color-accent;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+

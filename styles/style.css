@@ -271,6 +271,26 @@ body {
   color: rgb(252, 102, 2);
 }
 
+.pagination {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  margin: 20px 10px;
+  border: none;
+  background: rgb(252, 102, 2);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
