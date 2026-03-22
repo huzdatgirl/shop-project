@@ -1,7 +1,7 @@
 // Paginacja
 
 const products = document.querySelectorAll(".product-card");
-const productsPerPage = 12;
+const productsPerPage = 15;
 
 let currentPage = 1;
 const totalPages = Math.ceil(products.length / productsPerPage);
