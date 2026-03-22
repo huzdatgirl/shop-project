@@ -1,11 +1,13 @@
 // Paginacja
+
 const products = document.querySelectorAll(".product-card");
 const productsPerPage = 12;
 
 let currentPage = 1;
+const totalPages = Math.ceil(products.length / productsPerPage);
 
 function showPage(page) {
-    const start = (page -1) * productsPerPage;
+    const start = (page - 1) * productsPerPage;
     const end = start + productsPerPage;
 
     products.forEach((product, index) => {
@@ -16,8 +18,7 @@ function showPage(page) {
         }
     });
 
-    document.getElementById("page-info").textContent =
-    `Strona ${page} z ${Math.ceil(products.length / productsPerPage)}`;
+    renderPageNumbers();
 
     window.scrollTo({
         top: 0,
@@ -25,8 +26,29 @@ function showPage(page) {
     });
 }
 
+function renderPageNumbers() {
+    const container = document.getElementById("page-info");
+    container.innerHTML = "";
+
+    for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.textContent = i;
+
+        if (i === currentPage) {
+            btn.classList.add("active");
+        }
+
+        btn.addEventListener("click", () => {
+            currentPage = i;
+            showPage(currentPage);
+        });
+
+        container.appendChild(btn);
+    }
+}
+
 document.getElementById("next").addEventListener("click", () => {
-    if (currentPage < Math.ceil(products.length / productsPerPage)) {
+    if (currentPage < totalPages) {
         currentPage++;
         showPage(currentPage);
     }

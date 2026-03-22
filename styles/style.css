@@ -291,6 +291,24 @@ body {
   cursor: pointer;
 }
 
+#page-info {
+  display: flex;
+  gap: 8px;
+}
+
+#page-info button {
+  padding: 6px 10px;
+  border: none;
+  background: rgb(214, 210, 210);
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#page-info button.active {
+  background: rgb(252, 102, 2);
+  color: white;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -114,3 +114,21 @@
     cursor: pointer;
 }
 
+#page-info {
+    display: flex;
+    gap: 8px;
+}
+
+#page-info button {
+    padding: 6px 10px;
+    border: none;
+    background: rgb(214, 210, 210);
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#page-info button.active {
+    background: $color-accent;
+    color: white;
+}
+
