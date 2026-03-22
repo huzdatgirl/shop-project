@@ -1,24 +1,29 @@
 // Paginacja
 
-const products = document.querySelectorAll(".product-card");
-const productsPerPage = 15;
+const allProducts = Array.from(document.querySelectorAll(".product-card"));
+let filteredProducts = [...allProducts];
 
+const productsPerPage = 15;
 let currentPage = 1;
-const totalPages = Math.ceil(products.length / productsPerPage);
+
+const searchInput = document.getElementById("searchInput");
 
 function showPage(page) {
+
+    const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
     const start = (page - 1) * productsPerPage;
     const end = start + productsPerPage;
 
-    products.forEach((product, index) => {
+    allProducts.forEach(product => product.style.display = "none");
+
+    filteredProducts.forEach((product, index) => {
         if (index >= start && index < end) {
             product.style.display = "block";
-        } else {
-            product.style.display = "none";
         }
     });
 
-    renderPageNumbers();
+    renderPageNumbers(totalPages);
 
     window.scrollTo({
         top: 0,
@@ -26,7 +31,7 @@ function showPage(page) {
     });
 }
 
-function renderPageNumbers() {
+function renderPageNumbers(totalPages) {
     const container = document.getElementById("page-info");
     container.innerHTML = "";
 
@@ -45,9 +50,15 @@ function renderPageNumbers() {
 
         container.appendChild(btn);
     }
+
+    if (totalPages === 0) {
+        container.textContent = "Brak wyników";
+    }
 }
 
 document.getElementById("next").addEventListener("click", () => {
+    const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
     if (currentPage < totalPages) {
         currentPage++;
         showPage(currentPage);
@@ -59,6 +70,18 @@ document.getElementById("prev").addEventListener("click", () => {
         currentPage--;
         showPage(currentPage);
     }
+});
+
+searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+
+    filteredProducts = allProducts.filter(product => {
+        const text = product.textContent.toLowerCase();
+        return text.includes(query);
+    });
+
+    currentPage = 1;
+    showPage(currentPage);
 });
 
 showPage(currentPage);
