@@ -309,6 +309,11 @@ body {
   color: white;
 }
 
+.categories ul li a.active {
+  font-weight: bold;
+  color: rgb(252, 102, 2);
+}
+
 * {
   margin: 0;
   padding: 0;

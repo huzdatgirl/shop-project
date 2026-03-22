@@ -132,3 +132,7 @@
     color: white;
 }
 
+.categories ul li a.active {
+    font-weight: bold;
+    color: $color-accent;
+}
