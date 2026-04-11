@@ -352,6 +352,47 @@ body.product-page {
   max-height: 500px;
 }
 
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  background: #fafafa;
+}
+
+.accordion-content-inner {
+  padding: 15px;
+}
+.accordion-content-inner li {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.accordion-btn {
+  width: 100%;
+  padding: 15px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion-btn::after {
+  content: "▼";
+  transition: transform 0.3s ease;
+}
+.accordion-btn.active::after {
+  transform: rotate(180deg);
+}
+
+.product-accordion {
+  margin-top: 6px;
+}
+
 * {
   margin: 0;
   padding: 0;
