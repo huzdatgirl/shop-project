@@ -328,6 +328,7 @@ body.product-page {
   flex: 1;
   background-color: rgb(252, 248, 248);
   padding: 1.5rem;
+  border: 1px solid rgb(226, 225, 225);
 }
 .info h1 {
   font-size: 1.75rem;
@@ -340,16 +341,45 @@ body.product-page {
   line-height: 1.6;
 }
 
-.product-image {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
 .product-image img {
   max-width: 100%;
   height: auto;
   max-height: 500px;
+}
+
+.product-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-price {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: rgb(252, 102, 2);
+  font-weight: bold;
+}
+
+.buy-btn {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  background-color: rgb(252, 102, 2);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.buy-btn:hover {
+  background-color: rgb(252, 80, 0);
+  transform: translateY(-2px);
 }
 
 .accordion-content {
@@ -391,6 +421,68 @@ body.product-page {
 
 .product-accordion {
   margin-top: 6px;
+}
+
+.cart-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.cart-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
+}
+.cart-box p {
+  margin-top: 10px;
+}
+
+.cart-title {
+  margin-top: 10px;
+  color: rgb(252, 102, 2);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.qty-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.qty-controls button {
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: rgb(252, 102, 2);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: rgb(252, 248, 248);
+  border: none;
+  cursor: pointer;
 }
 
 * {
