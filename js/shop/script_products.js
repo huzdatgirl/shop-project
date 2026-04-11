@@ -75,10 +75,83 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     confirmBtn.addEventListener("click", () => {
-        alert(`Dodano ${qty} szt. za ${(price * qty).toFixed(2)} zł`);
+        const toast = document.getElementById("cart-toast");
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 1500);
         modal.style.display = "none";
 
-        // 👉 TU PÓŹNIEJ PODŁĄCZYMY PRAWDZIWY KOSZYK
+
+    });
+
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const modal = document.getElementById("cartModal");
+    const openBtn = document.querySelector(".buy-btn");
+
+    const plus = document.getElementById("plus");
+    const minus = document.getElementById("minus");
+    const qtyEl = document.getElementById("qty");
+    const totalEl = document.getElementById("total");
+
+    const closeBtn = document.getElementById("closeCart");
+    const confirmBtn = document.getElementById("addToCartConfirm");
+
+    const cartTotalEl = document.getElementById("cart-total");
+    const cartCountEl = document.getElementById("cart-count");
+
+    const price = 59.99;
+    let qty = 1;
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || {
+        count: 0,
+        total: 0
+    };
+
+    function updateModal() {
+        qtyEl.textContent = qty;
+        totalEl.textContent = (qty * price).toFixed(2);
+    }
+
+    function updateNavbar() {
+        cartTotalEl.textContent = cart.total.toFixed(2) + " zł";
+        cartCountEl.textContent = `(${cart.count})`;
+    }
+
+    openBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+        qty = 1;
+        updateModal();
+    });
+
+    plus.addEventListener("click", () => {
+        qty++;
+        updateModal();
+    });
+
+    minus.addEventListener("click", () => {
+        if (qty > 1) qty--;
+        updateModal();
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    confirmBtn.addEventListener("click", () => {
+        cart.count += qty;
+        cart.total += qty * price;
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        updateNavbar();
+        modal.style.display = "none";
     });
 
     modal.addEventListener("click", (e) => {
@@ -86,5 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
             modal.style.display = "none";
         }
     });
+
+    updateNavbar();
 
 });

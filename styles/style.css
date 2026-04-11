@@ -485,6 +485,30 @@ body.product-page {
   cursor: pointer;
 }
 
+.cart {
+  position: relative;
+}
+
+.cart-toast {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background: #28a745;
+  color: white;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.cart-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 * {
   margin: 0;
   padding: 0;
