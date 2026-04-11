@@ -314,6 +314,44 @@ body {
   color: rgb(252, 102, 2);
 }
 
+body.product-page {
+  padding-top: 140px;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.info {
+  flex: 1;
+  background-color: rgb(252, 248, 248);
+  padding: 1.5rem;
+}
+.info h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: rgb(252, 102, 2);
+}
+.info p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.product-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+}
+
 * {
   margin: 0;
   padding: 0;

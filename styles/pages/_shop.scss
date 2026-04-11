@@ -136,3 +136,44 @@
     font-weight: bold;
     color: $color-accent;
 }
+
+
+// Produkty
+body.product-page {
+    padding-top: 140px;
+}    
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.info {
+    flex: 1;
+    background-color: $color-layout-light;
+    padding: $space-lg;
+    h1 {
+        font-size: $text-xl;
+        margin-bottom: $space-sm;
+        color: $color-accent;
+    }
+    p {
+        margin-top: $space-base;
+        font-size: $text-base;
+        line-height: $line-height-base;
+    }
+}
+
+
+.product-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+}
